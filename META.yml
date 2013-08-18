@@ -1,10 +1,50 @@
-# http://module-build.sourceforge.net/META-spec.html
-#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
-name:         TCC
-version:      0.02
-version_from: lib/TCC.pm
-installdirs:  site
+---
+abstract: 'Full C JIT compiling using the Tiny C Compiler'
+author:
+  - 'David Mertens <dcmertens.perl@gmail.com>'
+build_requires:
+  ExtUtils::CBuilder: 0
+  Test::More: 0.88
+configure_requires:
+  Devel::PPPort: 0
+  Module::Build: 0.40
+dynamic_config: 1
+generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: TCC
+provides:
+  C::TinyCompiler:
+    file: lib/C/TinyCompiler.pm
+    version: 0.01
+  C::TinyCompiler::Callable:
+    file: lib/C/TinyCompiler/Callable.pm
+    version: 0.01
+  C::TinyCompiler::Perl:
+    file: lib/C/TinyCompiler/Perl.pm
+    version: 0
+  C::TinyCompiler::Perl::AV:
+    file: lib/C/TinyCompiler/Perl/AV.pm
+    version: 0.01
+  C::TinyCompiler::Perl::Croak:
+    file: lib/C/TinyCompiler/Perl/Croak.pm
+    version: 0.01
+  C::TinyCompiler::Perl::SV:
+    file: lib/C/TinyCompiler/Perl/SV.pm
+    version: 0.01
+  C::TinyCompiler::Perl::Typedefs:
+    file: lib/C/TinyCompiler/Perl/Typedefs.pm
+    version: 0
+  C::TinyCompiler::StretchyBuffer:
+    file: lib/C/TinyCompiler/StretchyBuffer.pm
+    version: 0
+  C::TinyCompiler::package:
+    file: lib/C/TinyCompiler/package.pm
+    version: 0
 requires:
-
-distribution_type: module
-generated_by: ExtUtils::MakeMaker version 6.30_01
+  perl: 5.01
+resources:
+  license: http://dev.perl.org/licenses/
+version: 0.01

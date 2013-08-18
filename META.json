@@ -1,0 +1,80 @@
+{
+   "abstract" : "Full C JIT compiling using the Tiny C Compiler",
+   "author" : [
+      "David Mertens <dcmertens.perl@gmail.com>"
+   ],
+   "dynamic_config" : 1,
+   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "TCC",
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "ExtUtils::CBuilder" : "0",
+            "Test::More" : "0.88"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Devel::PPPort" : "0",
+            "Module::Build" : "0.40"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "perl" : "5.01"
+         }
+      }
+   },
+   "provides" : {
+      "C::TinyCompiler" : {
+         "file" : "lib/C/TinyCompiler.pm",
+         "version" : "0.01"
+      },
+      "C::TinyCompiler::Callable" : {
+         "file" : "lib/C/TinyCompiler/Callable.pm",
+         "version" : "0.01"
+      },
+      "C::TinyCompiler::Perl" : {
+         "file" : "lib/C/TinyCompiler/Perl.pm",
+         "version" : 0
+      },
+      "C::TinyCompiler::Perl::AV" : {
+         "file" : "lib/C/TinyCompiler/Perl/AV.pm",
+         "version" : "0.01"
+      },
+      "C::TinyCompiler::Perl::Croak" : {
+         "file" : "lib/C/TinyCompiler/Perl/Croak.pm",
+         "version" : "0.01"
+      },
+      "C::TinyCompiler::Perl::SV" : {
+         "file" : "lib/C/TinyCompiler/Perl/SV.pm",
+         "version" : "0.01"
+      },
+      "C::TinyCompiler::Perl::Typedefs" : {
+         "file" : "lib/C/TinyCompiler/Perl/Typedefs.pm",
+         "version" : 0
+      },
+      "C::TinyCompiler::StretchyBuffer" : {
+         "file" : "lib/C/TinyCompiler/StretchyBuffer.pm",
+         "version" : 0
+      },
+      "C::TinyCompiler::package" : {
+         "file" : "lib/C/TinyCompiler/package.pm",
+         "version" : 0
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ]
+   },
+   "version" : "0.01"
+}

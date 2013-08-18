@@ -1,43 +1,62 @@
-TCC version 0.01
-================
+TCC
 
-The perl module TCC provides an interface to the TCC(Tiny C Compiler)
-See http://fabrice.bellard.free.fr/tcc/ for more information on TCC.
+These are Perl bindings to the Tiny C Compiler (TCC). TCC is a very fast, very 
+small, and nearly compliant C-99 compiler (sans complex numbers, I believe). 
+Some benchmarks claim that TCC compiles 7x faster than GCC. TCC does not apply 
+the same sorts of optimizations as GCC, mind you, but it still compiles to 
+machine code. Another important feature of TCC is that it can compile a string 
+of C code to machine code without writing to file. In other words, it can be 
+used as a Just In Time C compiler!
+
+If you do not yet see my point, then consider this: Perl has excellent string
+manipulation facilities. By combining Perl's ability to manipulate strings and
+TCC's ability to quickly compile C code, we have an easy, fast way to
+dynamically generate machine code. Perl's bytecode is fast, of course, but for
+certain numerical work, this can lead to operations that are orders of magnitude
+faster.
+
+(Though, admitedly, I don't yet have the benchmarks to prove my point.)
 
 INSTALLATION
-------------
 
-To install this module type the following:
+To install this module, run the following commands:
 
-   perl Makefile.PL
-   make
-   make test
-   make install
+	perl Build.PL
+	./Build
+	./Build test
+	./Build install
 
-DEPENDENCIES
-------------
+SUPPORT AND DOCUMENTATION
 
-This module requires these other modules and libraries:
+After installing, you can find documentation for this module with the
+perldoc command.
 
-  tcc
+    perldoc TCC
 
-COPYRIGHT AND LICENCE
----------------------
+You can also look for information at:
 
-Copyright (C) 2008 Tsukasa Hamano <hamano@klab.org>
+    RT, CPAN's request tracker (report bugs here)
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=TCC
 
-This library is free software; you can redistribute it and/or
-modify it under the terms of the GNU Lesser General Public
-License as published by the Free Software Foundation; either
-version 2.1 of the License, or (at your option) any later version.
+    AnnoCPAN, Annotated CPAN documentation
+        http://annocpan.org/dist/TCC
 
-This library is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-Lesser General Public License for more details.
+    CPAN Ratings
+        http://cpanratings.perl.org/d/TCC
 
-You should have received a copy of the GNU Lesser General Public
-License along with this library; if not, write to the Free Software
-Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307  USA
+    Search CPAN
+        http://search.cpan.org/dist/TCC/
 
-$Id: README,v 1.3 2008/03/16 19:07:15 hamano Exp $
+
+AUTHOR AND COPYRIGHT
+
+Written by David Mertens, Copyright 2011-2012 Northwestern University
+
+LICENSE
+
+This program is free software; you can redistribute it and/or modify it
+under the terms of either: the GNU General Public License as published
+by the Free Software Foundation; or the Artistic License.
+
+See http://dev.perl.org/licenses/ for more information.
+
